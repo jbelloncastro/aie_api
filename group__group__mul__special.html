@@ -21,13 +21,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="tables.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -4230,7 +4223,7 @@ requires ((N &gt;= 1) &amp;&amp; Acc::size() == Lanes &amp;&amp; <a class="el" h
 </div><div class="memdoc">
 
 <p>Performs a weighted addition over multiple vectors and accumulates the result into an existing accumulator. </p>
-<p>Given a finite number of vectors \( d_1, d_2, ..., d_C \) and a weight vector \( coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) \) for \( n \geq (C + start) \) and an accumulator \( acc \), the result is an accumulator of the form \( out = acc + \sum_{i=1}^{C} \alpha_{i + start} * d_i \).</p>
+<p>Given a finite number of vectors <picture><source srcset="form_0_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d_1, d_2, ..., d_C $" src="form_0.svg"/></picture> and a weight vector <picture><source srcset="form_1_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) $" src="form_1.svg"/></picture> for <picture><source srcset="form_2_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ n \geq (C + start) $" src="form_2.svg"/></picture> and an accumulator <picture><source srcset="form_3_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ acc $" src="form_3.svg"/></picture>, the result is an accumulator of the form <picture><source srcset="form_4_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ out = acc + \sum_{i=1}^{C} \alpha_{i + start} * d_i $" src="form_4.svg"/></picture>.</p>
 <p>Each of the data vectors is scaled by its corresponding element of coeff vector.</p>
 <p>The operation consists on a parametrized multiplication that implements the following compute pattern:</p>
 <div class="fragment"><div class="line">L   = Lanes</div>
@@ -4307,7 +4300,7 @@ requires ((<a class="el" href="namespaceaie.html#a4aeecaeb33bbf13108f02dcec54b29
 </div><div class="memdoc">
 
 <p>Performs a weighted addition over multiple vectors and accumulates the result into an existing accumulator. </p>
-<p>Given a finite number of vectors \( d_1, d_2, ..., d_C \) and a weight vector \( coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) \) for \( n \geq (C + start) \) and an accumulator \( acc \), the result is an accumulator of the form \( out = acc + \sum_{i=1}^{C} \alpha_{i + start} * d_i \).</p>
+<p>Given a finite number of vectors <picture><source srcset="form_0_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d_1, d_2, ..., d_C $" src="form_0.svg"/></picture> and a weight vector <picture><source srcset="form_1_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) $" src="form_1.svg"/></picture> for <picture><source srcset="form_2_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ n \geq (C + start) $" src="form_2.svg"/></picture> and an accumulator <picture><source srcset="form_3_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ acc $" src="form_3.svg"/></picture>, the result is an accumulator of the form <picture><source srcset="form_4_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ out = acc + \sum_{i=1}^{C} \alpha_{i + start} * d_i $" src="form_4.svg"/></picture>.</p>
 <p>Each of the data vectors is scaled by its corresponding element of coeff vector.</p>
 <p>The operation consists on a parametrized multiplication that implements the following compute pattern:</p>
 <div class="fragment"><div class="line">L   = Lanes</div>
@@ -4403,7 +4396,7 @@ requires (N &gt;= 1)</div>
 </div><div class="memdoc">
 
 <p>Performs a weighted addition over multiple vectors. </p>
-<p>Given a finite number of vectors \( d_1, d_2, ..., d_C \) and a weight vector \( coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) \), for \( n \geq (C + start) \), the result is an accumulator of the form \( out = \sum_{i=1}^{C} \alpha_{i + start} * d_i \).</p>
+<p>Given a finite number of vectors <picture><source srcset="form_0_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d_1, d_2, ..., d_C $" src="form_0.svg"/></picture> and a weight vector <picture><source srcset="form_1_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) $" src="form_1.svg"/></picture>, for <picture><source srcset="form_2_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ n \geq (C + start) $" src="form_2.svg"/></picture>, the result is an accumulator of the form <picture><source srcset="form_5_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ out = \sum_{i=1}^{C} \alpha_{i + start} * d_i $" src="form_5.svg"/></picture>.</p>
 <p>Each of the data vectors is scaled by its corresponding element of coeff vector.</p>
 <p>This function provides a parametrized multiplication that implements the following compute pattern:</p>
 <div class="fragment"><div class="line">L   = Lanes</div>
@@ -4468,7 +4461,7 @@ requires ((<a class="el" href="namespaceaie.html#a4aeecaeb33bbf13108f02dcec54b29
 </div><div class="memdoc">
 
 <p>Performs a weighted addition over multiple vectors. </p>
-<p>Given a finite number of vectors \( d_1, d_2, ..., d_C \) and a weight vector \( coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) \), for \( n \geq (C + start) \), the result is an accumulator of the form \( out = \sum_{i=1}^{C} \alpha_{i + start} * d_i \).</p>
+<p>Given a finite number of vectors <picture><source srcset="form_0_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ d_1, d_2, ..., d_C $" src="form_0.svg"/></picture> and a weight vector <picture><source srcset="form_1_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ coef = ( \alpha_1, \alpha_2, ..., \alpha_n ) $" src="form_1.svg"/></picture>, for <picture><source srcset="form_2_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ n \geq (C + start) $" src="form_2.svg"/></picture>, the result is an accumulator of the form <picture><source srcset="form_5_dark.svg" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$ out = \sum_{i=1}^{C} \alpha_{i + start} * d_i $" src="form_5.svg"/></picture>.</p>
 <p>Each of the data vectors is scaled by its corresponding element of coeff vector.</p>
 <p>This function provides a parametrized multiplication that implements the following compute pattern:</p>
 <div class="fragment"><div class="line">L   = Lanes</div>
